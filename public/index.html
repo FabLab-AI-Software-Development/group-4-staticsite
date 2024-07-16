@@ -4,25 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML Structure</title>
+
     <link rel="stylesheet" href="index.css"> <!-- Link to an external CSS file -->
+
+
+    <script src="script.js"></script>
+
 </head>
 <body>
 
     <header>
         <h1>Welcome to My Website</h1>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="container">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
         </nav>
     </header>
 
     <main>
         <section id="home">
+            <div class="container">
             <h2>Home</h2>
+
             <p>The place we call home.</p>
             <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-184106738_high.jpg" alt="Image of Downtown El Paso" />
         </section>
@@ -30,19 +37,27 @@
         <section id="about">
             <h2>About</h2>
             <p>Click <a href="about.html">here</a> to learn more!</p>
+
         </section>
 
         <section id="services">
+            <div class="container">
             <h2>Services</h2>
+
             <button id="growButton" onclick="growButton()">Click here!</button>
+
         </section>
 
         <section id="contact">
+            <div class="container">
             <h2>Contact</h2>
+
             <button onclick="location.href='about.html#bottom'">Contact us!</button>
+
         </section>
     </main>
-
+    <button id='butt1' type="submit">Touch Me</button>
+    <img src = "smile.jpeg" id = 'pic' alt="smile" width = '50' hidden>
     <footer>
         <p>&copy; 2024 My Website</p>
     </footer>
@@ -50,3 +65,5 @@
     <script src="script.js"></script> <!-- Link to an external JavaScript file -->
 </body>
 </html>
+
+// Hello Luis Thank you for leading
