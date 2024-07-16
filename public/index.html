@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML Structure</title>
-<<<<<<< HEAD
-    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file -->
 
-=======
     <link rel="stylesheet" href="index.css"> <!-- Link to an external CSS file -->
+
+
     <script src="script.js"></script>
->>>>>>> refs/remotes/origin/main
+
 </head>
 <body>
 
@@ -30,30 +29,31 @@
         <section id="home">
             <div class="container">
             <h2>Home</h2>
-            <p>This is the home section.</p>
-            </div>
+
+            <p>The place we call home.</p>
+            <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-184106738_high.jpg" alt="Image of Downtown El Paso" />
         </section>
 
         <section id="about">
-            <div class="container">
-            <h2>ABOUT</h2>
-            <p>Our App will seek local Events, Venues, Services</p>
-            </div>
-            
+            <h2>About</h2>
+            <p>Click <a href="about.html">here</a> to learn more!</p>
+
         </section>
 
         <section id="services">
             <div class="container">
             <h2>Services</h2>
-            <p>This is the services section.</p>
-        </div>
+
+            <button id="growButton" onclick="growButton()">Click here!</button>
+
         </section>
 
         <section id="contact">
             <div class="container">
             <h2>Contact</h2>
-            <p>This is the contact section.</p>
-            </div>
+
+            <button onclick="location.href='about.html#bottom'">Contact us!</button>
+
         </section>
     </main>
     <button id='butt1' type="submit">Touch Me</button>
