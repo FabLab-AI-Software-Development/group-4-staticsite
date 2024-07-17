@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Basic HTML Structure</title>
-
+    <title>My Concierge: Home</title>
     <link rel="stylesheet" href="index.css"> <!-- Link to an external CSS file -->
-
-
-    <script src="script.js"></script>
-
+    <script src="script.js"></script> <!-- Link to an external JavaScript file -->
 </head>
-<body>
 
+<body>
     <header>
-        <h1>Welcome to My Website</h1>
+        <h1>MyConcierge Services</h1>
         <nav>
             <div class="container">
                 <a href="#home">Home</a>
@@ -29,41 +25,45 @@
         <section id="home">
             <div class="container">
             <h2>Home</h2>
-
             <p>The place we call home.</p>
-            <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-184106738_high.jpg" alt="Image of Downtown El Paso" />
+            <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-184106738_high.jpg" alt="Image of Downtown El Paso" width = 500 />
+            </div>
         </section>
 
         <section id="about">
+            <div class="container">
             <h2>About</h2>
             <p>Click <a href="about.html">here</a> to learn more!</p>
-
+            </div>
         </section>
 
         <section id="services">
             <div class="container">
             <h2>Services</h2>
+            <button onclick="location.href='services.html'">Find What You Want!</button>
+            </div>
+        </section>
 
-            <button id="growButton" onclick="growButton()">Click here!</button>
-
+        <section id="fun">
+            <div class="container">
+            <h2>Fun</h2>
+            <button id="growButton" onclick="growButton()">Click here!</button><br><br>
+            <button id='butt1' type="submit">Touch Me</button>
+                <img src = "smile.jpeg" id = 'pic' alt="smile" width = '50' hidden>
+            </div>
         </section>
 
         <section id="contact">
             <div class="container">
             <h2>Contact</h2>
-
-            <button onclick="location.href='about.html#bottom'">Contact us!</button>
-
+            <button onclick="location.href='contact.html'">Contact us!</button>
+            </div>
         </section>
     </main>
-    <button id='butt1' type="submit">Touch Me</button>
-    <img src = "smile.jpeg" id = 'pic' alt="smile" width = '50' hidden>
+    
     <footer>
         <p>&copy; 2024 My Website</p>
     </footer>
-
-    <script src="script.js"></script> <!-- Link to an external JavaScript file -->
 </body>
 </html>
 
-// Hello Luis Thank you for leading
