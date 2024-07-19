@@ -5,6 +5,10 @@ import './index.css';
 import App from './App';
 import Gallery from './pages/gallery';
 import reportWebVitals from './reportWebVitals';
+import Home from './pages/home';
+import About from './pages/about';
+import Travel from './pages/travel';
+import Services from './pages/services';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -13,11 +17,11 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         {/* <Route index element={<Home />} /> */}
-      {/*   <Route path="/About" element={<About />} /> */}
+        <Route path="/Home" element={<Home />} />
+        <Route path="/About" element={<About />} />
         <Route path="/Gallery" element={<Gallery />} />
-        {/* <Route path="/Services" element={<Services />} />
-        <Route path="/travel" element={<travel />} />
-        */}
+        <Route path="/Services" element={<Services />} />
+        <Route path="/travel" element={<Travel />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

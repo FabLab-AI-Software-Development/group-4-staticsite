@@ -37,11 +37,6 @@
   }
 }
 
-body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-}
 .gallery {
   display: flex;
   flex-wrap: wrap;
