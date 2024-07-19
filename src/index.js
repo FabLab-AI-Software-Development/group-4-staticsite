@@ -13,11 +13,11 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         {/* <Route index element={<Home />} /> */}
-        <Route path="/About" element={<About />} />
+      {/*   <Route path="/About" element={<About />} /> */}
         <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Services" element={<Services />} />
+        {/* <Route path="/Services" element={<Services />} />
         <Route path="/travel" element={<travel />} />
-       
+        */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
