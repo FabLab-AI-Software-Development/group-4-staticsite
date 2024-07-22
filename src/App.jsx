@@ -1,10 +1,12 @@
 import './App.css';
 import Nav from './components/nav/nav.jsx';
+import Favorite from './components/favorite.jsx'
 
 function App() {
   return (
     <div className="App">
       <Nav />
+      
         <section id="home">
             <div class="container">
             <h2>Home</h2>
