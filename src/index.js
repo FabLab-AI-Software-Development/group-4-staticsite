@@ -6,7 +6,7 @@ import App from './App';
 import Gallery from './pages/gallery';
 import reportWebVitals from './reportWebVitals';
 import Home from './pages/home';
-import About from './pages/about';
+import About from './pages/About';
 import Travel from './pages/travel';
 import Services from './pages/services';
 
