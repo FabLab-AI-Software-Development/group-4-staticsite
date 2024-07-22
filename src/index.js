@@ -9,6 +9,7 @@ import Home from './pages/home';
 import About from './pages/about';
 import Travel from './pages/travel';
 import Services from './pages/services';
+import Events from './pages/events';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,6 +23,7 @@ root.render(
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Services" element={<Services />} />
         <Route path="/travel" element={<Travel />} />
+        <Route path='/events' element={<Events />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
