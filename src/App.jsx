@@ -1,11 +1,17 @@
 import './App.css';
 import Nav from './components/nav/nav.jsx';
+import Home from './pages/home.jsx';  // Import the Home component
 import Favorite from './components/favorite.jsx'
+
 
 function App() {
   return (
     <div className="App">
       <Nav />
+
+      <main>
+        <Home />  {/* Use the Home component here */}
+
       
         <section id="home">
             <div class="container">
@@ -17,6 +23,7 @@ function App() {
         </section>
 
       
+
     </div>
   );
 }
