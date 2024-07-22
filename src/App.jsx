@@ -9,7 +9,7 @@ function App() {
     <div className="App">
       <Nav />
 
-      <main>
+ 
         <Home />  {/* Use the Home component here */}
 
       
@@ -21,6 +21,7 @@ function App() {
             {/* <img src="https://lp-cms-production.imgix.net/2019-06/GettyImages-184106738_high.jpg" alt="Image of Downtown El Paso" width = 500 /> */}
             </div>
         </section>
+
 
       
 
