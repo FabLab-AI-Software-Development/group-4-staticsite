@@ -55,3 +55,99 @@
   margin-top: 20px;
   display: none;
 }
+
+/* General Styles for the Events Section */
+.events-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Styles for individual event cards */
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px 0;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.event-card h3 {
+  color: #333;
+  margin: 0 0 10px 0;
+}
+
+.event-card p {
+  color: #666;
+  margin: 5px 0;
+}
+
+.event-card button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 0;
+  transition: background-color 0.3s;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.event-card button:hover {
+  background-color: #45a049;
+}
+
+/* Styles for the list of events you are going to */
+.going-events {
+  margin-top: 20px;
+  width: 90%;
+  max-width: 600px;
+}
+
+.going-events h3 {
+  margin-bottom: 10px;
+}
+
+.going-events p {
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 5px 0;
+  border-left: 5px solid #4CAF50;
+}
+
+
+.events-list {
+  display: flex;
+  gap: 20px;
+}
+
+.event-card {
+  cursor: pointer;
+  overflow: hidden; /* Ensures the expandable content animates cleanly */
+}
+
+.additional-info {
+  margin-top: 10px;
+}
+
+.additional-info img {
+  width: 100%; /* Ensure the image fits within the card */
+  height: auto;
+  border-radius: 8px;
+}
