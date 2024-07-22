@@ -10,4 +10,7 @@ const About = () => {
     );
   };
   
-  export default About;
+
+  export default About;//     // but since zipCodes are static here, it's just simulating a fetch
+
+

@@ -1,11 +1,18 @@
 import './App.css';
 import Nav from './components/nav/nav.jsx';
 import ZipCodeSearch from './components/Zip_code/Ziplocate.jsx';
+import Home from './pages/home.jsx';  // Import the Home component
+import Favorite from './components/favorite.jsx'
 
 function App() {
   return (
     <div className="App">
       <Nav />
+
+ 
+        <Home />  {/* Use the Home component here */}
+
+      
         <section id="home">
             <div class="container">
             <h2>Home</h2>
@@ -16,7 +23,9 @@ function App() {
             </div>
         </section>
 
+
       
+
     </div>
   );
 }
