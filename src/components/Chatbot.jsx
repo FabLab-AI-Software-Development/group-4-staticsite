@@ -1,18 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 
 const Chatbot = ({ initialMessage }) => {
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
   const [inputText, setInputText] = useState('');
+  const messagesEndRef = useRef(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  }
 
   useEffect(() => {
-    // You can add effects here, like scrolling to the bottom of the chat
+    scrollToBottom();
   }, [messages]);
 
   const handleInputChange = (e) => {
     setInputText(e.target.value);
   };
 
-  const handleSendMessage = () => {
+  const sendMessage = () => {
     if (inputText.trim() !== '') {
       setMessages([...messages, { text: inputText, sender: 'user' }]);
       setInputText('');
@@ -24,6 +29,12 @@ const Chatbot = ({ initialMessage }) => {
     }
   };
 
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      sendMessage();
+    }
+  };
+
   return (
     <div className="chatbot">
       <div className="chat-messages">
@@ -32,16 +43,18 @@ const Chatbot = ({ initialMessage }) => {
             {message.text}
           </div>
         ))}
+        <div ref={messagesEndRef} />
       </div>
       <div className="chat-input">
         <input
           type="text"
           value={inputText}
           onChange={handleInputChange}
+          onKeyPress={handleKeyPress}
           placeholder="Type a message..."
         />
         <button 
-          onClick={handleSendMessage}
+          onClick={sendMessage}
           disabled={inputText.trim() === ''}
         >
           Send
