@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 // import './events.css';
+import Nav from '../components/nav/nav';
 
 function Events() {
     // Sample list of events
@@ -26,6 +27,7 @@ function Events() {
 
     return (
         <div className="app">
+            <Nav />
             <section className="section events-section" id="events">
                 <div className="container">
                     <div className="section-title">

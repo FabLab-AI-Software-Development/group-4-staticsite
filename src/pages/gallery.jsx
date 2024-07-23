@@ -1,8 +1,10 @@
 import React from 'react';
+import Nav from '../components/nav/nav';
 
 const Gallery =() => {
     return (
         <>
+        <Nav /> 
         <div class="gallery">
             <img src="https://files.worldwildlife.org/wwfcmsprod/images/Tiger_resting_Bandhavgarh_National_Park_India/hero_small/6aofsvaglm_Medium_WW226365.jpg" alt="Image 1" onclick="showDescription('Team Leader')"/>
             <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" alt="Image 2" onclick="showDescription('Description for Image 2')"/>
@@ -12,7 +14,6 @@ const Gallery =() => {
         </div>
         <div id="description" class="description"></div>
         </>
-
     )
 }
 
