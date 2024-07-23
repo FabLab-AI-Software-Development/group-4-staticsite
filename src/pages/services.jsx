@@ -1,5 +1,6 @@
 import React from 'react';
 import '../style/services.css';
+import Nav from '../components/nav/nav';
 
 function Services() {
     const services = [
@@ -37,6 +38,7 @@ function Services() {
     
       return (
         <div className="app">
+          <Nav /> 
           <section className="section services-section" id="services">
             <div className="container">
               <div className="section-title">
