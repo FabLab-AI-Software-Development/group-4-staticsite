@@ -1,0 +1,18 @@
+.event-card {
+    position: relative;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.event-card-header {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.favorite-icon {
+    cursor: pointer;
+    font-size: 24px;
+}

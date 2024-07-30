@@ -18,11 +18,11 @@ const Users = () => {
         <div>
             <h1>Users</h1>
             <ul>
-                {
+                {/* {
                 users.map((user) => (
                     <p key={user.id}>{user.username} {user.password}</p>
                 ))
-                }
+                } */}
             </ul>
         </div>
     );
