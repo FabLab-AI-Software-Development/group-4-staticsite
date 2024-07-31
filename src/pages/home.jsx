@@ -3,10 +3,11 @@ import Chatbot from "../components/Chatbot";  // Make sure this path is correct
 import DateSearch from "../components/date_search";
 import Nav from "../components/nav/nav";
 import fetchUsers from "../routes/api";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 const Users = () => {
     const [users, setUsers] = React.useState([]);
-
     React.useEffect(() => {
         fetchUsers().then((users) => {
             setUsers(users);
@@ -16,7 +17,7 @@ const Users = () => {
 
     return (
         <div>
-            <h1>Users</h1>
+            {/* <h1>Users</h1> */}
             <ul>
                 {/* {
                 users.map((user) => (
