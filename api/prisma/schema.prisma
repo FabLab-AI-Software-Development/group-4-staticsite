@@ -28,3 +28,21 @@ model User {
   username String @unique
   password String
 }
+
+model Event {
+  id Int @id @default(autoincrement()) @map("_id") 
+  name String
+  date DateTime @default(now())
+  location Location?
+}
+
+model Location {
+  location_id Int @id @default(autoincrement())
+  name String?
+  street_name String
+  city String
+  state String
+  zip Int
+  event Event @relation(fields: [event_id], references: [id])
+  event_id Int @unique
+}
