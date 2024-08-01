@@ -10,7 +10,7 @@
     "install-all": "npm run install-api && npm run install-client",
     "install-api": "cd api && npm install",
     "install-client": "cd client && npm install",
-    "new-migration": "cd api && prisma migrate dev --name init --schema src/prisma/schema.prisma",
+    "new-migration": "cd api && prisma migrate dev --name init --schema ./prisma/schema.prisma",
     "db-migrate": "cd api && npx prisma migrate deploy"
   },
   "keywords": [],
