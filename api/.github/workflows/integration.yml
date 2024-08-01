@@ -1,0 +1,31 @@
+name: Continuous Integration
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install project dependencies
+        run: npm ci
+
+      - name: Set up Render environment variables
+        run: echo "DATABASE_URL=${{ secrets.RENDER_DATABASE_URL }}" >> .env
+
+      - name: Run database migration files
+        run: npm run db-migrate
+
+      - name: Run unit tests
+        run: npm test
