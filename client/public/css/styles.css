@@ -10936,7 +10936,7 @@ p {
     font-size: 1.25em;
   }
   #mainNav.navbar-shrink .navbar-brand svg,
-  #mainNav.navbar-shrink .navbar-brand img {
+  #mainNav.navbar-shrink .navbar-brand  {
     height: 1.5rem;
   }
   #mainNav .navbar-nav .nav-item {
@@ -11326,4 +11326,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 #services{
   background-color: #101214;
+}
+.chat-messages{
+  color:#fff !important;
 }
