@@ -23,6 +23,7 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.18",
     "prisma": "^3.15.2",
-    "supertest": "^6.2.4"
+    "supertest": "^6.2.4",
+    "@babel/plugin-proposal-private-property-in-object":"7.21.11"
   }
 }

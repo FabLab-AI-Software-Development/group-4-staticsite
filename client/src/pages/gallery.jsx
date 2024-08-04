@@ -6,11 +6,11 @@ const Gallery =() => {
         <>
         <Nav /> 
         <div class="gallery">
-            <img src="https://files.worldwildlife.org/wwfcmsprod/images/Tiger_resting_Bandhavgarh_National_Park_India/hero_small/6aofsvaglm_Medium_WW226365.jpg" alt="Image 1" onclick="showDescription('Team Leader')"/>
-            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" alt="Image 2" onclick="showDescription('Description for Image 2')"/>
-            <img src="https://i.natgeofe.com/n/4f5aaece-3300-41a4-b2a8-ed2708a0a27c/domestic-dog_thumb_square.jpg" alt="Image 3" onclick="showDescription('Description for Image 3')"/>
-            <img src="https://i.abcnewsfe.com/a/c43529b4-d093-4c75-aa57-1005778c2122/wirestory_116b158ee773d84ce0211955f4b47f2a_16x9.jpg?w=992" alt="Image 4" onclick="showDescription('Description for Image 4')"/>
-            <img src="https://www.terro.com/media/Articles/TERRO/how_to_contain_a_roach_infestation.png" alt="Image 5" onclick="showDescription('Description for Image 5')"/>
+            <img src="https://files.worldwildlife.org/wwfcmsprod/images/Tiger_resting_Bandhavgarh_National_Park_India/hero_small/6aofsvaglm_Medium_WW226365.jpg" alt="Tiger" onclick="showDescription('Team Leader')"/>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/37/Killerwhales_jumping.jpg" alt="Orca" onclick="showDescription('Description for Image 2')"/>
+            <img src="https://dogtime.com/wp-content/uploads/sites/12/2011/01/GettyImages-653001154-e1691965000531.jpg?w=1024" alt="Shina_Ibu" onclick="showDescription('Description for Image 3')"/>
+            <img src="https://nolalobstersdirect.com/wp-content/uploads/2020/11/Depositphotos_10892320_l-2015.jpg" alt="Crustacean" onclick="showDescription('Description for Image 4')"/>
+            <img src="https://naturalhistory.si.edu/sites/default/files/styles/circle_teaser/public/media/image/nmnh-cutout-template-henry-copy.png.webp?itok=ERxBhDs1" alt="Cucaracha" onclick="showDescription('Description for Image 5')"/>
         </div>
         <div id="description" class="description"></div>
         </>

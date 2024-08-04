@@ -16,13 +16,11 @@
 // export default fetchUsers;
 
 import { axiosUtil } from "./axios-client";
-
 const userSlug = '/users';
-// const authorSlug = '/authors';
+// const eventSlug = '/events';
 
 
 async function fetchUsers() {
-    
     try {
         const response = await axiosUtil.get(userSlug);
         console.log("getUsers", response.data);
