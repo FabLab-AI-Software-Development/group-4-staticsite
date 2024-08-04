@@ -1,4 +1,4 @@
-import { axiosUtil } from "./axiosUtil";
+import { axiosUtil } from "./axios-client";
 
 const routeSlug = '/users';
 
