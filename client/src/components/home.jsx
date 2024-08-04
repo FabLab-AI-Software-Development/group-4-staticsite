@@ -147,7 +147,7 @@ function Home() {
           </div>
           <div className="col-lg-4">
             <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/tavo.png" alt="..." />
+              <img className="mx-auto rounded-circle" src="assets/img/team/el_vato_sq.png" alt="..." />
               <h4>Tavo Gonzales</h4>
               <p className="text-muted">Backend</p>
               {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter" /></a> */}
