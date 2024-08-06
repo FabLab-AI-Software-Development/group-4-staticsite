@@ -23,6 +23,7 @@ model Event {
   name String
   date DateTime @default(now())
   location Location?
+  description String
 }
 
 
