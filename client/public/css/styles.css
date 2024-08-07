@@ -8093,7 +8093,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #fff !important;
+
   
 }
 
@@ -11028,9 +11028,11 @@ header.masthead .masthead-heading {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-weight: 700;
   margin-bottom: 0;
+  color: #000;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-subheading {
   font-style: italic;
+  color: #000;
   font-family: "Roboto Slab", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
@@ -11326,7 +11328,16 @@ section#contact form#contactForm :-ms-input-placeholder {
 
 #services{
   background-color: #101214;
+  height:350px;
 }
 .chat-messages{
   color:#fff !important;
+}
+
+.portfolio-caption-subheading text-muted{
+  color:#000;
+}
+
+.text-muted{
+  color:white;
 }
