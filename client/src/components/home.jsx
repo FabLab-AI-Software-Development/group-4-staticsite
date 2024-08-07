@@ -1,117 +1,17 @@
 import React, { } from "react";
 import Chatbot from './Chatbot';
 
+
 function Home() {
   return (
   <>
   <div>
-    {/* Portfolio Grid*/}
-    <section className="page-section bg-dark" id="portfolio">
-      <div className="container">
-        <div className="text-center">
-          <h2 className="section-heading text-uppercase" id="biz">Business & Events</h2>
-          <h3 className="section-subheading text-muted">See what's going on this week!</h3>
-        </div>
-        <div className="row">
-          <div className="col-lg-4 col-sm-6 mb-4">
-            {/* Portfolio item 1*/}
-            <div className="portfolio-item">
-              <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                </div>
-                <img className="img-fluid" src="assets/img/portfolio/stacker.jpg" alt="..." />
-              </a>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-heading">Outdoors</div>
-                <div className="portfolio-caption-subheading text-muted">See the Franklins</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-4">
-            {/* Portfolio item 2*/}
-            <div className="portfolio-item">
-              <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal2">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                </div>
-                <img className="img-fluid" src="assets/img/portfolio/chicos.jpg" alt="..." />
-              </a>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-heading">Food</div>
-                <div className="portfolio-caption-subheading text-muted">Hungry?</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-4">
-            {/* Portfolio item 3*/}
-            <div className="portfolio-item">
-              <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal3">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                </div>
-                <img className="img-fluid" src="assets/img/portfolio/dtview.webp" alt="..." />
-              </a>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-heading">Entertainment</div>
-                <div className="portfolio-caption-subheading text-muted">Catch some shows</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-            {/* Portfolio item 4*/}
-            <div className="portfolio-item">
-              <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal4">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                </div>
-                <img className="img-fluid" src="assets/img/portfolio/folklorico.jpeg" alt="..." />
-              </a>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-heading">Dance</div>
-                <div className="portfolio-caption-subheading text-muted">Let loose, footloose</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6 mb-4 mb-sm-0">
-            {/* Portfolio item 5*/}
-            <div className="portfolio-item">
-              <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal5">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                </div>
-                <img className="img-fluid" src="assets/img/portfolio/cactus.webp" alt="Downtown" />
-              </a>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-heading">Only in the 915</div>
-                <div className="portfolio-caption-subheading text-muted">All the cultura</div>
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-4 col-sm-6">
-            {/* Portfolio item 6*/}
-            <div className="portfolio-item">
-              <a className="portfolio-link" data-bs-toggle="modal" href="#portfolioModal6">
-                <div className="portfolio-hover">
-                  <div className="portfolio-hover-content"><i className="fas fa-plus fa-3x" /></div>
-                </div>
-                <img className="img-fluid" src="assets/img/portfolio/sjp.jpg" alt="..." />
-              </a>
-              <div className="portfolio-caption">
-                <div className="portfolio-caption-heading">Feeling Lucky?</div>
-                <div className="portfolio-caption-subheading text-muted">Click here and find out more</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-        {/* Chatbot */}
-        <section className="page-section" id="services">
+    {/* Chatbot */}
+    <section className="page-section" id="services">
       <div className="container">
         <div className="text-center">
           <h2 className="section-heading text-uppercase">ELP Concierge Chatbot</h2>
-          <h3 className="section-subheading text-muted">Ask our ChatGPT powered bot a question</h3>
+          {/* <h3 className="section-subheading text-muted">Ask our ChatGPT powered bot a question</h3> */}
           <Chatbot />
         </div>
       </div>
@@ -205,7 +105,7 @@ function Home() {
       <div className="container">
         <div className="text-center">
           <h2 className="section-heading text-uppercase">Contact Us</h2>
-          <h3 className="section-subheading text-muted">Shoot us an e-mail</h3>
+          {/* <h3 className="section-subheading text-muted">Shoot us an e-mail</h3> */}
         </div>
         {/* * * * * * * * * * * * * * * **/}
         {/* * * SB Forms Contact Form * **/}
