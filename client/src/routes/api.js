@@ -19,7 +19,6 @@ import { axiosUtil } from "./axios-client";
 const userSlug = '/users';
 // const eventSlug = '/events';
 
-
 async function fetchUsers() {
     try {
         const response = await axiosUtil.get(userSlug);

@@ -6,7 +6,8 @@
   "scripts": {
     "test": "jest --watch",
     "start": "nodemon index.js",
-    "db-migrate": "npx prisma migrate deploy"
+    "db-migrate": "npx prisma migrate deploy",
+    "dev-migrate:init": "prisma migrate dev --name init --schema ./prisma/schema.prisma"
   },
   "keywords": [],
   "author": "",

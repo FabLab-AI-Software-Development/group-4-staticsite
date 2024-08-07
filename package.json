@@ -9,13 +9,16 @@
     "start-client": "cd client && npm start",
     "install-all": "npm run install-api && npm run install-client",
     "install-api": "cd api && npm install",
-    "install-client": "cd client && npm install"
+    "install-client": "cd client && npm install",
+    "new-migration": "cd api && prisma migrate dev --name init --schema ./prisma/schema.prisma",
+    "db-migrate": "cd api && npx prisma migrate deploy"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^1.7.3",
-    "concurrently": "^8.2.2"
+    "concurrently": "^8.2.2",
+    "react-bootstrap": "^2.10.4"
   }
 }

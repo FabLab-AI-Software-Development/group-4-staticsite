@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 
+
 const Chatbot = ({ initialMessage }) => {
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
   const [inputText, setInputText] = useState('');
