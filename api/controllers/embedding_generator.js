@@ -1,65 +1,78 @@
 const { OpenAI } = require("openai");
 const { Client } = require("pg");
-const { checkEmbeddingValid } = require("./embeddings_utils.js");
 
-const PropertiesReader = require('properties-reader');
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-const properties = PropertiesReader(__dirname + '/application.properties.ini');
-
-const openai = new OpenAI({ apiKey: properties.get('OPENAI_API_KEY') });
+console.log('apikey', openai)
 
 const pgEndpoint = {
-    host: properties.get('DATABASE_HOST'),
-    port: properties.get('DATABASE_PORT'),
-    database: properties.get('DATABASE_NAME'),
-    user: properties.get('DATABASE_USER'),
-    password: properties.get('DATABASE_PASSWORD')
+    host: 'localhost',
+    port: 5432, 
+    database: process.env.LOCAL_DB,
+    user: process.env.DB_USER,
 };
+
+
+function checkEmbeddingValid(embedding) {
+    if (embedding == undefined || embedding.data == undefined || embedding.data[0].embedding == undefined) {
+        console.log("Error generating an embedding: " + JSON.stringify(embedding));
+        return false;
+    }
+
+    if (embedding.data.length > 1) {
+        console.log("Unsupported: more than one embedding returned: " + JSON.stringify(embedding));
+        return false;
+    }
+
+    if (embedding.data[0].embedding.length != 1536) {
+        console.log("Unsupported: embedding length is not 1536: " + JSON.stringify(embedding.data[0].embedding.length));
+        return false;
+    }
+
+    return true;
+}
 
 async function main() {
     const client = new Client(pgEndpoint);
     await client.connect();
-
     console.log("Connected to Postgres");
 
-    let id = 0;
-    let length = 0;
+    let lastId = 0; 
     let totalCnt = 0;
 
-    do {
-        console.log(`Processing rows starting from ${id}`);
+    while (true) {
+        console.log(`Processing rows starting from ${lastId}`);
 
         const res = await client.query(
-            "SELECT id, description FROM your_table " +
-            "WHERE id >= $1 and description IS NOT NULL ORDER BY id LIMIT 200", [id]);
-        length = res.rows.length;
-        let rows = res.rows;
+            "SELECT \"_id\", description FROM \"Event\" " +
+            "WHERE _id > $1 and description IS NOT NULL ORDER BY _id LIMIT 200", [lastId]);
+        const rows = res.rows;
+        const length = rows.length;
 
-        if (length > 0) {
-            for (let i = 0; i < length; i++) {
-                const description = rows[i].description.replace(/\*|\n/g, ' ');
+        if (length === 0) break; 
 
-                id = rows[i].id;
+        for (const row of rows) {
+            const { _id: id, description } = row;
+            const cleanDescription = description.replace(/\*|\n/g, ' ');
 
-                const embeddingResp = await openai.embeddings.create({
-                    model: "text-embedding-3-small",
-                    input: description,
-                });
+            const embeddingResp = await openai.embeddings.create({
+                model: "text-embedding-3-small",
+                input: cleanDescription,
+            });
 
-                if (!checkEmbeddingValid(embeddingResp))
-                    return;
+            if (!checkEmbeddingValid(embeddingResp))
+                return; 
 
-                const res = await client.query("UPDATE your_table SET description_embedding = $1 WHERE id = $2",
-                    ['[' + embeddingResp.data[0].embedding + ']', id]);
+            await client.query(
+                "UPDATE \"Event\" SET description_embedding = $1 WHERE _id = $2",
+                ['{' + embeddingResp.data[0].embedding.join(',') + '}', id]);
 
-                totalCnt++;
-            }
-
-            id++;
-
-            console.log(`Processed ${totalCnt} rows`);
+            totalCnt++;
+            lastId = id; 
         }
-    } while (length != 0);
+
+        console.log(`Processed ${totalCnt} rows`);
+    }
 
     console.log(`Finished generating embeddings for ${totalCnt} rows`);
     process.exit(0);
