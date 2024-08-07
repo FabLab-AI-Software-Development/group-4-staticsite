@@ -51,12 +51,12 @@ const signIn = async (req, res) => {
     });
     if (!user)
       return res.status(404).json({
-        message: "wrong email password combination",
+        message: "wrong user password combination",
       });
     const user_password = bcrypt.compareSync(password, user.password);
     if (!user_password)
       return res.status(404).json({
-        message: "wrong email password combination",
+        message: "wrong user password combination",
       });
 
     return res.status(200).json({
