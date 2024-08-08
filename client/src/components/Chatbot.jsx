@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-
+import axios from 'axios'; // Import axios for making HTTP requests
 
 const Chatbot = ({ initialMessage }) => {
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
@@ -18,15 +18,31 @@ const Chatbot = ({ initialMessage }) => {
     setInputText(e.target.value);
   };
 
-  const sendMessage = () => {
+  const sendMessage = async () => {
     if (inputText.trim() !== '') {
+      // Add the user's message to the chat
       setMessages([...messages, { text: inputText, sender: 'user' }]);
+      const userMessage = inputText;
       setInputText('');
-      // Here you would typically call a function to get the bot's response
-      // For now, let's just add a placeholder response
-      setTimeout(() => {
-        setMessages(prevMessages => [...prevMessages, { text: "I'm a bot response!", sender: 'bot' }]);
-      }, 1000);
+
+      try {
+        // Send the message to the backend
+        const response = await axios.post('http://localhost:3001/api/openai/chat', {
+          message: userMessage,
+        });
+
+        // Add the bot's response to the chat
+        setMessages(prevMessages => [
+          ...prevMessages,
+          { text: response.data.response, sender: 'bot' }
+        ]);
+      } catch (error) {
+        console.error('Error getting bot response:', error);
+        setMessages(prevMessages => [
+          ...prevMessages,
+          { text: 'Sorry, there was an error processing your request.', sender: 'bot' }
+        ]);
+      }
     }
   };
 
