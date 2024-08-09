@@ -11,7 +11,7 @@ datasource db {
 }
 
 model User {
-  user_user_id Int @id @default(autoincrement())
+  id Int @id @default(autoincrement())
   username String @unique
   password String
 }
@@ -21,6 +21,8 @@ model Event {
   name String
   date DateTime @default(now())
   location Location?
+  description String
+  description_embedding Float[] 
 }
 
 model Location {
