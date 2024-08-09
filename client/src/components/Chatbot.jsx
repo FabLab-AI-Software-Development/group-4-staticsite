@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios'; // Import axios for making HTTP requests
+import axios from 'axios';
 
 const Chatbot = ({ initialMessage }) => {
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
   const [inputText, setInputText] = useState('');
+  const [firstResponse, setFirstResponse] = useState(true);  // Track if it's the first response
   const messagesEndRef = useRef(null);
 
   const scrollToBottom = () => {
@@ -20,21 +21,26 @@ const Chatbot = ({ initialMessage }) => {
 
   const sendMessage = async () => {
     if (inputText.trim() !== '') {
-      // Add the user's message to the chat
       setMessages([...messages, { text: inputText, sender: 'user' }]);
       const userMessage = inputText;
       setInputText('');
 
       try {
-        // Send the message to the backend
         const response = await axios.post('http://localhost:3001/api/openai/chat', {
           message: userMessage,
         });
 
-        // Add the bot's response to the chat
+        let botMessage = response.data.response;
+
+        // Prepend the custom greeting only for the first response
+        if (firstResponse) {
+          botMessage = `I hope you're having a FabLabulous day! ${botMessage}`;
+          setFirstResponse(false);  // Update the state to indicate the greeting has been sent
+        }
+
         setMessages(prevMessages => [
           ...prevMessages,
-          { text: response.data.response, sender: 'bot' }
+          { text: botMessage, sender: 'bot' }
         ]);
       } catch (error) {
         console.error('Error getting bot response:', error);
