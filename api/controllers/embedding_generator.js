@@ -1,17 +1,25 @@
-const { OpenAI } = require("openai");
+//get env variable ***very important; put at very beginning
+const {config} = require('dotenv');
+config();
+//this works too!
+// require('dotenv').config({ path: '../../.env' });
+
+const { OpenAI } = require('openai');
 const { Client } = require("pg");
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
-console.log('apikey', openai)
+// console.log('apikey', openai)
 
 const pgEndpoint = {
     host: 'localhost',
     port: 5432, 
     database: process.env.LOCAL_DB,
     user: process.env.DB_USER,
+    password: process.env.DB_PASS
 };
 
+console.log(process.env.DB_PASS)
 
 function checkEmbeddingValid(embedding) {
     if (embedding == undefined || embedding.data == undefined || embedding.data[0].embedding == undefined) {
