@@ -21,11 +21,25 @@ const userSlug = '/users';
 
 async function fetchUsers() {
     try {
-        const response = await axiosUtil.get(userSlug);
+        const response = await axiosUtil.get('/api/v1/' + userSlug);
         console.log("getUsers", response.data);
         return response.data;
     } catch (error) {
         console.error(error);
+    }
+}
+
+export async function embeddedSearch(prompt) {
+    try {
+        const response = await axiosUtil.get('/search', {
+            params: {
+                prompt: prompt
+            }
+        });
+        console.log('embedded search response', response)
+        return response
+    } catch (error) {
+        console.log(error)
     }
 }
 

@@ -1,6 +1,6 @@
 import React, { } from "react";
 import Chatbot from './Chatbot';
-
+import SearchComponent from "./EmbedSearch";
 
 function Home() {
   return (
@@ -10,7 +10,12 @@ function Home() {
     <section className="page-section" id="services">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-heading text-uppercase">ELP Concierge Chatbot</h2>
+          <div>
+          <h2 className="section-heading text-uppercase">Event Semantc Search</h2>
+          <SearchComponent />
+          </div>
+
+          <h2 className="section-heading text-uppercase p-3">ELP Concierge Chatbot</h2>
           {/* <h3 className="section-subheading text-muted">Ask our ChatGPT powered bot a question</h3> */}
           <Chatbot />
         </div>
