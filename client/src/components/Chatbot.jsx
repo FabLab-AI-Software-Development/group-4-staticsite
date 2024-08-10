@@ -2,10 +2,14 @@ import React, { useState, useEffect, useRef } from 'react';
 
 
 const Chatbot = ({ initialMessage }) => {
+  //This is start up message chatbox starts with
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
+  //at start input box should be empty
   const [inputText, setInputText] = useState('');
+  //????
   const messagesEndRef = useRef(null);
 
+  //function brings chatbot message into view
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }

@@ -1,5 +1,5 @@
 import React, { } from "react";
-
+import Chatbot from "./Chatbot";
 
 function Header() {
   return (
@@ -15,8 +15,9 @@ function Header() {
           </button>
           <div className="collapse navbar-collapse" id="navbarResponsive">
             <ul className="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-              <li className="nav-item"><a className="nav-link" href="#portfolio">Events</a></li>
-              <li className="nav-item"><a className="nav-link" href="#services">Chatbot</a></li>
+              <li className="nav-item"><a className="nav-link" href="/events">Events</a></li>
+              <li className="nav-item"><a className="nav-link" href="/services">Services</a></li>
+              <li className="nav-item"><a className="nav-link" href="/search">Search Events</a></li>
               <li className="nav-item"><a className="nav-link" href="#team">Team</a></li>
               <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
             </ul>
@@ -26,6 +27,7 @@ function Header() {
       {/* Masthead*/}
       <header className="masthead">
         <div className="container">
+          <Chatbot /> 
               {/* Portfolio Grid*/}
     <section className="page-section bg-dark" id="portfolio">
       <div className="container">

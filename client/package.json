@@ -40,6 +40,7 @@
   },
   "devDependencies": {
     "prisma": "^5.17.0",
-    "react-router-dom": "^6.25.1"
+    "react-router-dom": "^6.25.1",
+    "@babel/plugin-proposal-private-property-in-object":"7.21.11"
   }
 }
