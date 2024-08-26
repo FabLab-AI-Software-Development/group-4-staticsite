@@ -1,11 +1,11 @@
 import React from 'react';
-import './nav.css';
+import styles from './nav.module.css';
 
 const Nav = () => {
     return (
         <nav>
-        <div class="container">
-            <a href="/home">Home</a>
+        <div className={styles.container}>
+            <a href="/">Home</a>
             <a href="/about">About</a>
             <a href="/services">Services</a>
             <a href="/gallery">Gallery</a>

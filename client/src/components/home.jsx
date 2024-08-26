@@ -1,6 +1,6 @@
 import React, { } from "react";
 import Chatbot from './Chatbot';
-import SearchComponent from "./EmbedSearch";
+
 
 function Home() {
   return (
@@ -10,12 +10,7 @@ function Home() {
     <section className="page-section" id="services">
       <div className="container">
         <div className="text-center">
-          <div>
-          <h2 className="section-heading text-uppercase">Event Semantc Search</h2>
-          <SearchComponent />
-          </div>
-
-          <h2 className="section-heading text-uppercase p-3">ELP Concierge Chatbot</h2>
+          <h2 className="section-heading text-uppercase">ELP Concierge Chatbot</h2>
           {/* <h3 className="section-subheading text-muted">Ask our ChatGPT powered bot a question</h3> */}
           <Chatbot />
         </div>
@@ -32,79 +27,50 @@ function Home() {
         <div className="row">
           <div className="col-lg-4">
             <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/jon.jpeg" alt="..." />
+              <img className="mx-auto rounded-circle" src="assets/img/team/jon.jpeg" alt="Joe2" />
               <h4>Jon Avila</h4>
               <p className="text-muted">Frontend</p>
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i className="fab fa-twitter" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Facebook Profile"><i className="fab fa-facebook-f" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand LinkedIn Profile"><i className="fab fa-linkedin-in" /></a> */}
+         
             </div>
           </div>
           <div className="col-lg-4">
             <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/caren.jpeg" alt="..." />
+              <img className="mx-auto rounded-circle" src="assets/img/team/caren.jpeg" alt="Caren" />
               <h4>Caren Garcia</h4>
               <p className="text-muted">Frontend</p>
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in" /></a> */}
             </div>
           </div>
           <div className="col-lg-4">
             <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/el_vato_sq.png" alt="..." />
-              <h4>Tavo Gonzales</h4>
+              <img className="mx-auto rounded-circle" src="assets/img/team/el_vato_sq.png" alt="Joe1" />
+              <h4>Tavo Gonzalez</h4>
               <p className="text-muted">Backend</p>
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in" /></a> */}
+
             </div>
           </div>
           <div className="col-lg-4">
             <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/luis.jpeg" alt="..." />
+              <img className="mx-auto rounded-circle" src="assets/img/team/luis.jpeg" alt="Luis" />
               <h4>Luis Hernandez</h4>
               <p className="text-muted">Fullstack</p>
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Twitter Profile"><i className="fab fa-twitter" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen Facebook Profile"><i className="fab fa-facebook-f" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Diana Petersen LinkedIn Profile"><i className="fab fa-linkedin-in" /></a> */}
             </div>
           </div>
           <div className="col-lg-4">
             <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/david.jpeg" alt="..." />
+              <img className="mx-auto rounded-circle" src="assets/img/team/david.jpeg" alt="David" />
               <h4>David Marek</h4>
               <p className="text-muted">Backend</p>
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Twitter Profile"><i className="fab fa-twitter" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker Facebook Profile"><i className="fab fa-facebook-f" /></a> */}
-              {/* <a className="btn btn-dark btn-social mx-2" href="#!" aria-label="Larry Parker LinkedIn Profile"><i className="fab fa-linkedin-in" /></a> */}
+            
             </div>
           </div>
         </div>
         <div className="row">
-          {/* <div className="col-lg-8 mx-auto text-center"><p className="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p></div> */}
+          
         </div>
       </div>
     </section>
     {/* Clients*/}
-    {/* <div className="py-5">
-      <div className="container">
-        <div className="row align-items-center">
-          <div className="col-md-3 col-sm-6 my-3">
-            <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/microsoft.svg" alt="..." aria-label="Microsoft Logo" /></a>
-          </div>
-          <div className="col-md-3 col-sm-6 my-3">
-            <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/google.svg" alt="..." aria-label="Google Logo" /></a>
-          </div>
-          <div className="col-md-3 col-sm-6 my-3">
-            <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/facebook.svg" alt="..." aria-label="Facebook Logo" /></a>
-          </div>
-          <div className="col-md-3 col-sm-6 my-3">
-            <a href="#!"><img className="img-fluid img-brand d-block mx-auto" src="assets/img/logos/ibm.svg" alt="..." aria-label="IBM Logo" /></a>
-          </div>
-        </div>
-      </div>
-    </div> */}
+    
     {/* Contact*/}
     <section className="page-section" id="contact">
       <div className="container">

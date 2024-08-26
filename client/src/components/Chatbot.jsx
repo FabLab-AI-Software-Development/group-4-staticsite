@@ -1,12 +1,15 @@
 import React, { useState, useEffect, useRef } from 'react';
-import axios from 'axios';
+
 
 const Chatbot = ({ initialMessage }) => {
+  //This is start up message chatbox starts with
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
+  //at start input box should be empty
   const [inputText, setInputText] = useState('');
-  const [firstResponse, setFirstResponse] = useState(true);  // Track if it's the first response
+  //????
   const messagesEndRef = useRef(null);
 
+  //function brings chatbot message into view
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }
@@ -19,36 +22,15 @@ const Chatbot = ({ initialMessage }) => {
     setInputText(e.target.value);
   };
 
-  const sendMessage = async () => {
+  const sendMessage = () => {
     if (inputText.trim() !== '') {
       setMessages([...messages, { text: inputText, sender: 'user' }]);
-      const userMessage = inputText;
       setInputText('');
-
-      try {
-        const response = await axios.post('http://localhost:3001/api/openai/chat', {
-          message: userMessage,
-        });
-
-        let botMessage = response.data.response;
-
-        // Prepend the custom greeting only for the first response
-        if (firstResponse) {
-          botMessage = `I hope you're having a FabLabulous day! ${botMessage}`;
-          setFirstResponse(false);  // Update the state to indicate the greeting has been sent
-        }
-
-        setMessages(prevMessages => [
-          ...prevMessages,
-          { text: botMessage, sender: 'bot' }
-        ]);
-      } catch (error) {
-        console.error('Error getting bot response:', error);
-        setMessages(prevMessages => [
-          ...prevMessages,
-          { text: 'Sorry, there was an error processing your request.', sender: 'bot' }
-        ]);
-      }
+      // Here you would typically call a function to get the bot's response
+      // For now, let's just add a placeholder response
+      setTimeout(() => {
+        setMessages(prevMessages => [...prevMessages, { text: "I'm a bot response!", sender: 'bot' }]);
+      }, 1000);
     }
   };
 

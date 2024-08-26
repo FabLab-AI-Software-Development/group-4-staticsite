@@ -54,4 +54,4 @@ const Home = () => {
 }
 
 export default Home;
-export {fetchUsers};
+export {Users};

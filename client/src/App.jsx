@@ -1,21 +1,18 @@
-import './App.css';
-// import ZipCodeSearch from './components/Zip_code/Ziplocate.jsx';
-// import fetchUsers from './routes/api.js';
-//import Chatbot from './components/Chatbot.jsx';
-
+//Caren's masterpiece
+//8.9.24 added Person component and Gallery page
+import './style/app.css';
 import Header from './components/header';
 import Home from './components/home';
 import Footer from './components/footer';
-
+import Gallery from './pages/gallery';
 
 function App() {
   return (
     <div className="App">
-     <Header />
-     <Home />
-     <Footer /> 
-        {/* <ZipCodeSearch />    */}
-
+     < Header />
+     < Home />
+     < Gallery/>
+     < Footer /> 
     </div>
   );
 }

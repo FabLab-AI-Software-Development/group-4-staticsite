@@ -1,0 +1,21 @@
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px;
+}
+.gallery img {
+  border: 5px solid white;
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.descriptionDiv {
+  text-align: center;
+  margin-top: 20px;
+}
+
+

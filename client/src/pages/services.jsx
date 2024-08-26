@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/services.css';
+import '../style/services.module.css';
 import Nav from '../components/nav/nav';
 
 function Services() {

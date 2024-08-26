@@ -1,11 +1,14 @@
+//this first part sets the state of a user. Imports fxns from api (to get existing users or submit credentials of current one)
 import React, { useEffect, useState } from "react";
-import { fetchUsers, submitUserData } from "../routes/api";
+import fetchUsers, { submitUserData } from "../routes/api";
 
 const Person = () => {
+    
     const [users, setUsers] = useState([]);
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
 
+    //submit user and compare to existing users in db--where???
     const submitUser = async (username, password ) => {
         console.log("submitUserData", username, password);
         const userData = {
@@ -39,6 +42,8 @@ const Person = () => {
             <input type="text" value={username} onChange={(e) => setUsername(e.target.value)} placeholder="Enter your name" />
             <input type="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="Enter your password" />
             <button onClick={() => submitUser(username, password)}>Submit</button>
+
+            {/* this is crazy function -- need to fix, immediate add*/}
             {users.length > 0 ? (
                 users.map((user) => (
                     <p key={user.id}>{user.username} {user.password}</p>
@@ -50,4 +55,4 @@ const Person = () => {
     );
 };
 
-export { Person };
+export {Person};
