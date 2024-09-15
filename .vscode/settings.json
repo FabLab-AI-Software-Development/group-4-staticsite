@@ -1,0 +1,6 @@
+{
+  "editor.hover.sticky": false,
+  "editor.hover.delay": 2000,
+  "editor.hover.hidingDelay": 200,
+  "workbench.hover.delay": 2000
+}

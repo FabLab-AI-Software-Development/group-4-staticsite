@@ -1,0 +1,43 @@
+/* about.css */
+html {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  height: 100%; /* Ensure body takes full height */
+}
+
+.container {
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  background-color:  #212529;
+  /* background-size: cover; Cover the entire area */
+  /* background-position: center; Center the background image */
+  /* background-repeat: no-repeat; Prevent repeating the background */
+}
+
+h1 {
+    padding: 10px;
+  }
+
+.curve {
+    padding: 0px;
+    width: auto; /* Adjust the width as needed */
+    /* text-align: center; */
+    margin: 0 auto;
+    transform-origin: center center;
+    transform: translateY(0%) rotate(-10deg);
+
+  }
+
+a#contact{
+  color: black;
+}
+
+a#contact:active{
+  color: yellow;
+}
+
+a#contact:visited{
+    color: rgb(65, 65, 107)35, 35, 63);
+  }
+  

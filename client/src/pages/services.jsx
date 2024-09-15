@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/services.module.css';
+import styles from  '../style/services.module.css';
 import Nav from '../components/nav/nav';
 
 function Services() {
@@ -37,22 +37,22 @@ function Services() {
       ];
     
       return (
-        <div className="app">
+        <div className={styles.app}>
           <Nav /> 
-          <section className="section services-section" id="services">
-            <div className="container">
-              <div className="section-title">
+          <section className={styles['services-section']}>
+            <div className={styles.container}>
+              <div className={styles['section-title']}>
                 <h2>Our Services</h2>
                 <p>We leverage advanced AI to tailor event experiences, ensuring you connect with the perfect community and opportunities.</p>
               </div>
-              <div className="row">
+              <div className={styles.row}>
                 {services.map((service, index) => (
-                  <div key={index} className="col-lg-4">
-                    <div className="feature-box-1">
-                      <div className="icon">
+                  <div key={index} className={styles['col-lg-4']}>
+                    <div className={styles['feature-box-1']}>
+                      <div className={styles.icon}>
                         <i className={`fa ${service.icon}`}></i>
                       </div>
-                      <div className="feature-content">
+                      <div className={styles['feature-content']}>
                         <h5>{service.title}</h5>
                         <p>{service.description}</p>
                       </div>

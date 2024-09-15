@@ -1,6 +1,8 @@
 import React, { } from "react";
 
 function Header() {
+
+
   return (
     // <!-- Navigation-->
     <>
@@ -30,7 +32,8 @@ function Header() {
     <section className="page-section bg-dark" id="portfolio">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-heading text-uppercase" id="biz">ELP Concierge</h2>
+          <h2 className="section-heading text-uppercase" id="biz">MI Concierge</h2>
+          <h3>El Paso TX</h3>
           <h3 className="section-subheading text-muted">See what's going on this week!</h3>
         </div>
         <div className="portfolio row">

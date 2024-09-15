@@ -40,7 +40,7 @@ function Events() {
     };
 
     return (
-        <div className="app">
+        <div className="events-app">
             <Nav />
             <section className="section events-section" id="events">
                 <div className="container">

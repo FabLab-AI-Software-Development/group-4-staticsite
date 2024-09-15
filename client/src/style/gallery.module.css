@@ -1,21 +1,40 @@
-.gallery {
+html, body{
+  height:100%;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+  background-color:  #212529;
+  min-height: 100vh;
+}
+
+
+.gallery{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
-  padding: 20px;
+  padding: 10px;
 }
+
+div {
+  color: white;
+  text-align: center;
+}
+
 .gallery img {
   border: 5px solid white;
   width: 200px;
   height: auto;
   cursor: pointer;
   object-fit: cover;
+  box-shadow: 0 0 15px rgba(115, 74, 129, 0.9); /* Glow effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.descriptionDiv {
-  text-align: center;
-  margin-top: 20px;
+.gallery img:hover {
+  box-shadow: 0 0 25px rgba(255, 255, 255, 1); /* Stronger glow on hover */
 }
 
 

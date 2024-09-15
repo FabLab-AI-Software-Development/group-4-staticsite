@@ -4726,7 +4726,7 @@ textarea.form-control-lg {
   --bs-alert-border-color: #bcbebf;
 }
 .alert-dark .alert-link {
-  color: #101214;
+  color: #212529;
 }
 
 @keyframes progress-bar-stripes {
@@ -11327,7 +11327,7 @@ section#contact form#contactForm :-ms-input-placeholder {
 }
 
 #services{
-  background-color: #101214;
+  background-color: #212529;
 }
 .chat-messages{
   color:#fff !important;

@@ -1,8 +1,12 @@
-import React, { } from "react";
+import React, { useEffect} from "react";
 import Chatbot from './Chatbot';
 
 
 function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 200);
+  }, []);
+
   return (
   <>
   <div>
@@ -10,8 +14,8 @@ function Home() {
     <section className="page-section" id="services">
       <div className="container">
         <div className="text-center">
-          <h2 className="section-heading text-uppercase">ELP Concierge Chatbot</h2>
-          {/* <h3 className="section-subheading text-muted">Ask our ChatGPT powered bot a question</h3> */}
+          <h2 className="section-heading text-uppercase">Mi Concierge </h2>
+          <h3 className="section-subheading text-muted">Ask us a question. Chuco Style Por Favor!</h3>
           <Chatbot />
         </div>
       </div>
@@ -22,7 +26,7 @@ function Home() {
       <div className="container">
         <div className="text-center">
           <h2 className="section-heading text-uppercase">Our Amazing Team</h2>
-          <h3 className="section-subheading text-muted">Fablab Group 4</h3>
+          <h3 className="section-subheading text-muted">Fablab IV</h3>
         </div>
         <div className="row">
           <div className="col-lg-4">
@@ -44,7 +48,7 @@ function Home() {
             <div className="team-member">
               <img className="mx-auto rounded-circle" src="assets/img/team/el_vato_sq.png" alt="Joe1" />
               <h4>Tavo Gonzalez</h4>
-              <p className="text-muted">Backend</p>
+              <p className="text-muted">Fullstack</p>
 
             </div>
           </div>

@@ -1,16 +1,17 @@
-body {
-    margin-top: 20px;
-    font-family: Arial, sans-serif;
-    background: #f4f4f9; /* Light background to keep focus on content */
-  }
-  
   /* Container for centering the content */
   .container {
     width: 90%;
     max-width: 1200px;
     margin: auto;
+    background-color: #212529;
   }
   
+/* Background color */
+.services-section {
+  background-color: #212529;
+  
+}
+
   /* Simple grid layout */
   .row {
     display: flex;
@@ -43,7 +44,7 @@ body {
     width: 70px;
     height: 70px;
     line-height: 70px;
-    background: #007bff; /* Blue background for the icon circle */
+    background: #003161; /* Blue background for the icon circle */
     color: #ffffff;
     text-align: center;
     border-radius: 50%;
@@ -57,7 +58,7 @@ body {
   }
   
   .feature-box-1 p {
-    color: #333;
+    color: #212529;
     margin: 0;
   }
   
@@ -90,15 +91,18 @@ body {
   
   .section-title h2 {
     font-weight: 700;
-    color: #20247b;
+    /* color: #20247b; */
+    color: #4682b4; /* Blue color */
+    text-shadow: 1px 3px 1px #0703036d; /* White blur outline */
+    
     font-size: 36px;
     margin: 0 0 15px;
-    border-left: 5px solid #007bff; /* Blue left border for title */
+    border-left: 5px solid #686869; /* Left border for title */
     padding-left: 15px;
   }
   
   .section-title p {
     font-size: 16px;
-    color: #666;
+    color: #f7eaea;
   }
   
