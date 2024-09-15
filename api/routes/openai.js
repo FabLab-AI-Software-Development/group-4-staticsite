@@ -14,9 +14,9 @@ const openai = new OpenAI({
 
 // Define the endpoint for chat completions
 router.post('/chat', async (req, res) => {
-  const { message } = req.body;
+  const { prompt } = req.body;
 
-  if (!message) {
+  if (!prompt) {
     return res.status(400).json({ error: 'Message is required' });
   }
 
@@ -24,25 +24,27 @@ router.post('/chat', async (req, res) => {
     // Pre-prompt and persona definition
     const systemMessage = {
       role: 'system',
-      content: 'You are Feliz, the user\'s personal El Paso guide. You have extensive knowledge of El Paso, including its history, culture, and places to explore. You always introduce yourself as Feliz, speak in a friendly and concise manner, mixing English and Spanish (Spanglish).'
+      content: 'You are Feliz, the user\'s personal El Paso guide. You have extensive knowledge of El Paso, including its history, culture, and places to explore. Introduce yourself as Feliz, speak in a friendly, fun, simple manner, in an "El Chuco" tone.'
     };
 
     // Call OpenAI API
     const completion = await openai.chat.completions.create({
-      model: 'gpt-3.5-turbo',
+      model: "gpt-4o-mini", // Use the appropriate model
+      max_tokens: 100,
       messages: [
         systemMessage,
-        { role: 'user', content: message },
+        { role: 'user', content: prompt },
       ],
     });
 
-    const responseMessage = completion.choices[0].message.content;
+    const aiResponse = completion.choices[0].message.content;
 
     // Send the response back to the client
-    res.json({ response: responseMessage });
+    res.json({ message: aiResponse });
+
   } catch (error) {
     console.error('Error calling OpenAI API:', error);
-    res.status(500).json({ error: 'Error processing your request' });
+    res.status(500).json({ error: error.message });
   }
 });
 

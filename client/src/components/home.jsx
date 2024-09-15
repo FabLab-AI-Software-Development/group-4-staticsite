@@ -1,5 +1,5 @@
 import React, { useEffect} from "react";
-import Chatbot from './Chatbot';
+import Chatbot from './Chatito';
 
 
 function Home() {

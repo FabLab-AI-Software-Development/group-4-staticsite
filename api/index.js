@@ -1,14 +1,15 @@
 const express = require('express');
-const openaiRoutes = require('./routes/openai.js');
+const openaiRoute = require('./routes/openai.js');
 const cors = require('cors');
 const dotenv = require('dotenv');
+const app = require("./app");
 
 // Load environment variables
 dotenv.config();
 
-const PORT = 3001;
+const PORT = 5001;
 
-const app = require("./app");
+app.use('/api/openai', openaiRoute);    
 
 app.listen(PORT, () => {
   console.log(`server has started on http://localhost:${PORT}`);
