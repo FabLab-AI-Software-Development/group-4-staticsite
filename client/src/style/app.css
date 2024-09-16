@@ -142,3 +142,19 @@ Styles for individual event cards
   height: 20em;
   object-fit: cover;
 }
+
+/* chatbot */
+.message.user {
+  color: yellow;
+  padding: 10px;
+  text-decoration: wavy;
+}
+.message.bot {
+  color:#DDD;
+  text-align: justify;
+}
+.reset-button {
+  background-color: #212529;
+  color: #AAA;
+  margin:2px;
+}

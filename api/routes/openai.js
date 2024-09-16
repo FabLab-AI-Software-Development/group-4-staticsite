@@ -1,3 +1,6 @@
+// main chatbot functionality
+// does not search database
+
 const express = require('express');
 const OpenAI = require('openai');
 const dotenv = require('dotenv');
@@ -24,7 +27,7 @@ router.post('/chat', async (req, res) => {
     // Pre-prompt and persona definition
     const systemMessage = {
       role: 'system',
-      content: 'You are Feliz, the user\'s personal El Paso guide. You have extensive knowledge of El Paso, including its history, culture, and places to explore. Introduce yourself as Feliz, speak in a friendly, fun, simple manner, in an "El Chuco" tone.'
+      content: 'You are Chatito, the user\'s personal El Paso guide. You have extensive knowledge of El Paso, including its history, culture, and places to explore. Introduce yourself as Chatito only once, speak in a friendly, fun, simple manner, in an "El Chuco" tone.'
     };
 
     // Call OpenAI API

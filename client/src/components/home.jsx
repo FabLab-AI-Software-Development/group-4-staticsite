@@ -29,22 +29,14 @@ function Home() {
           <h3 className="section-subheading text-muted">Fablab IV</h3>
         </div>
         <div className="row">
-          <div className="col-lg-4">
-            <div className="team-member">
-              <img className="mx-auto rounded-circle" src="assets/img/team/jon.jpeg" alt="Joe2" />
-              <h4>Jon Avila</h4>
-              <p className="text-muted">Frontend</p>
-         
-            </div>
-          </div>
-          <div className="col-lg-4">
+          <div className="col-lg-3">
             <div className="team-member">
               <img className="mx-auto rounded-circle" src="assets/img/team/caren.jpeg" alt="Caren" />
               <h4>Caren Garcia</h4>
               <p className="text-muted">Frontend</p>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-3">
             <div className="team-member">
               <img className="mx-auto rounded-circle" src="assets/img/team/el_vato_sq.png" alt="Joe1" />
               <h4>Tavo Gonzalez</h4>
@@ -52,24 +44,28 @@ function Home() {
 
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-3">
             <div className="team-member">
               <img className="mx-auto rounded-circle" src="assets/img/team/luis.jpeg" alt="Luis" />
               <h4>Luis Hernandez</h4>
               <p className="text-muted">Fullstack</p>
             </div>
           </div>
-          <div className="col-lg-4">
+          <div className="col-md-3">
             <div className="team-member">
               <img className="mx-auto rounded-circle" src="assets/img/team/david.jpeg" alt="David" />
               <h4>David Marek</h4>
               <p className="text-muted">Backend</p>
-            
             </div>
           </div>
-        </div>
-        <div className="row">
-          
+          <div className="col-lg-3">
+            <div className="team-member">
+              <img className="mx-auto rounded-circle" src="assets/img/team/jon.jpeg" alt="Joe2" />
+              <h4>Jon Avila</h4>
+              <p className="text-muted">Frontend</p>
+         
+            </div>
+          </div>
         </div>
       </div>
     </section>

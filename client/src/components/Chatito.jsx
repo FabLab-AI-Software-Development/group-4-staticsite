@@ -1,18 +1,16 @@
 //9.15.24 per OG
 import React, { useState, useEffect, useRef } from 'react';
 
-
 const Chatbot = ({ initialMessage }) => {
   //This is start up message chatbox starts with
   const [messages, setMessages] = useState([{ text: initialMessage, sender: 'bot' }]);
-  //????
   const messagesEndRef = useRef(null);
 
   //at start input box should be empty
   const [prompt, setPrompt] = useState('');
 
   useEffect(() => {
-    scrollToBottom();
+    // scrollToBottom();
   }, [messages]);
 
 const handleSubmit = async (prompt) => {
@@ -28,8 +26,7 @@ const handleSubmit = async (prompt) => {
     return data.message;
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
+  const handleFormSubmit = (prompt) => {
     const message = prompt;
     setMessages([...messages, { text: message, sender: 'user' }]);
     setPrompt('');
@@ -45,14 +42,17 @@ const handleSubmit = async (prompt) => {
     }
   };
 
-  //function brings chatbot message into view
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }
+//   //function brings chatbot message into view
+//   const scrollToBottom = () => {
+//     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+//   }
 
   return (
+    
     <div className="chatbot">
       <div className="chat-input">
+      <button className="reset-button" type='text' onClick={(e) => setMessages([{ text: initialMessage, sender: 'bot' }])}>Start Again</button>
+        
         <form onSubmit={handleFormSubmit}>
           <input
             type="text"
@@ -64,7 +64,6 @@ const handleSubmit = async (prompt) => {
          <button type="submit" disabled={prompt.trim() === ''}>
             Send
           </button>
-
           </form>
       </div>
       <div className="chat-messages">
@@ -75,6 +74,7 @@ const handleSubmit = async (prompt) => {
         ))}
         <div ref={messagesEndRef} />
       </div>
+     
     </div>
   );
 };
