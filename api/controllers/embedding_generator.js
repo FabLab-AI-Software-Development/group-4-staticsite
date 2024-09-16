@@ -19,8 +19,10 @@ const pgEndpoint = {
     password: process.env.DB_PASS
 };
 
-console.log(process.env.DB_PASS)
+// console.log(process.env.DB_PASS)
 
+
+//Embeddings error pre-checker
 function checkEmbeddingValid(embedding) {
     if (embedding == undefined || embedding.data == undefined || embedding.data[0].embedding == undefined) {
         console.log("Error generating an embedding: " + JSON.stringify(embedding));
@@ -40,6 +42,7 @@ function checkEmbeddingValid(embedding) {
     return true;
 }
 
+//Embeddings generator
 async function main() {
     const client = new Client(pgEndpoint);
     await client.connect();

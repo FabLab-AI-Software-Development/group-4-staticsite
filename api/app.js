@@ -1,6 +1,6 @@
 // provides backend functionality
 // aggregates routes
-
+// also used to do a Postgres Search using Embeddings on routes /search
 const express = require("express");
 const dotenv = require("dotenv");
 const cors = require("cors");

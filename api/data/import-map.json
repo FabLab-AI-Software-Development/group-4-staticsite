@@ -1,0 +1,15 @@
+{
+    "Event": {
+      "name": "Event Title",
+      "date": {
+        "column_name": "Date",
+        "format": "Month DD, YYYY"
+        },
+      "description": "Description"
+    },
+    "table2": {
+      "column3": "csv_column3",
+      "column4": "csv_column4"
+    }
+  }
+  

@@ -158,3 +158,8 @@ Styles for individual event cards
   color: #AAA;
   margin:2px;
 }
+
+/* MODALS */
+.modal-body {
+  color:black;
+}
